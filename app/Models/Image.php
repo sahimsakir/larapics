@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Storage;
 class Image extends Model
 {
     use HasFactory;
+    protected $fillable = ['title','file','dimension', 'user_id','slug'];
 
     public static function makeDirectory()
     {
@@ -31,6 +32,6 @@ class Image extends Model
     }
     public function permalink()
     {
-        return route("image.show", $this->slug);
+        return $this->slug ? route("image.show", $this->slug) : '#' ;
     }
 }

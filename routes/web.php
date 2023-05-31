@@ -20,3 +20,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[ImageController::class,  'index'])->name('image.index');
 Route::get('/images/{image}',[ImageController::class,  'show'])->name('image.show');
+Route::get('/images',[ImageController::class,  'create'])->name('image.create');
+Route::post('/images',[ImageController::class,  'store'])->name('image.store');
