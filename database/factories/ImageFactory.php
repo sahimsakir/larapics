@@ -20,7 +20,7 @@ class ImageFactory extends Factory
         return [
             'title' => $title = $this->faker->sentence(),
             'slug' => str()->slug($title),
-            'File' => $this->faker->imageUrl($width= 1920, $height= 1280),
+            'file' => $this->faker->imageUrl($width= 1920, $height= 1280),
             'dimension' => $width . "x" . $height,
             'views_count' => $this->faker->randomNumber(5),
             'downloads_count' => $this->faker->randomNumber(5),
